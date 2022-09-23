@@ -7,18 +7,37 @@
 }
 
 .rmdb-header-content {
-  max-width: 1280px;
-  min-height: 120px;
+  /*max-width: 1280px;
+  min-height: 120px;*/
   height: auto;
   padding: 20px 0px;
   margin: 0 auto;
   box-sizing: border-box;
   overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.rmdb-header-content a{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.rmdb-header-content a p{
+  font-family: 'Abel', sans-serif;
+  color: white;
+  font-weight: bold;
+    font-size: 40px;
+    margin: 0;
+    margin-left: 20px;
+}
+
+
 .rmdb-logo {
-  width: 300px;
-  margin-top: 20px;
+  width: 80px;
+  margin-top: 0px;
   float: left;
 }
 
@@ -26,6 +45,17 @@
   width: 122px;
   margin-top: 25px;
   float: right;
+}
+
+nav ul li{
+  display: inline;
+  color: white;
+  font-family: 'Abel', sans-serif;
+  padding: 0 10px;
+  font-size: 24px;
+}
+nav ul a{
+  display: inline!important;
 }
 
 @media screen and (max-width: 500px) {

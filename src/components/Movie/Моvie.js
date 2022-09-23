@@ -19,6 +19,7 @@ class Movie extends Component{
         this.setState({
             loading:true
         })
+        console.log(this.props.match.params);
         const endpoint= `${API_URL}movie/${this.props.match.params.movieId}?api_key=${API_KEY}`;
         console.log(endpoint);
         this.fetchItems(endpoint);
@@ -55,6 +56,7 @@ class Movie extends Component{
     render(){
         return(
             <div className="rmdb-movie">
+                
                {this.state.movie ?
             <div>
                 <Navigation movie={this.props.location.movieName}/>

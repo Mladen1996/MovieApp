@@ -82,6 +82,8 @@ class Home extends React.Component{
     
       render() {
         const { movies, heroImage, loader, searchTerm } = this.state;
+
+        console.log(this.state.movies);
     
         return (
           <div className="rmdb-home">
@@ -103,13 +105,14 @@ class Home extends React.Component{
                 
                 movies.map((element, i) => (
                   
-                  <MovieThumb
+                 <MovieThumb
                     key={i}
                     clickable={true}
                     image={element.poster_path ? `${IMAGE_BASE_URL}${POSTER_SIZE}${element.poster_path}` : './images/no_image.jpg'}
                     movieId={element.id}
                     movieName={element.original_title}
-                  />
+                    category="popular"
+                /> 
         ))}
     
               </FourColGrid>
